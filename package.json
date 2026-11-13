@@ -1,0 +1,15 @@
+{
+  "name": "playwright-qa-showcase",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public Playwright TypeScript E2E & quality guardrail suite verifying Jeff Marck's portfolio website.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.0.0"
+  }
+}
