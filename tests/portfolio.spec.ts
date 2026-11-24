@@ -41,10 +41,11 @@ test.describe('Portfolio Quality & Privacy Guardrails', () => {
     await page.goto('/');
 
     await page.getByRole('button', { name: /Run audit/i }).click();
-    await expect(page.locator('#audit-results')).toContainText('PASS');
+    await expect(page.locator('#audit-results')).toContainText('4/4 specs passed');
     await expect(page.locator('#audit-results')).not.toContainText('FAIL');
 
     await page.getByRole('button', { name: 'Refactor DOM' }).click();
+    await page.getByRole('button', { name: /Run test/i }).click();
     await expect(page.locator('#locator-results')).toContainText('FAIL');
     await expect(page.locator('#locator-results')).toContainText('PASS');
   });
